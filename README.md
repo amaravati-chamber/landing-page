@@ -1,82 +1,115 @@
-# [Start Bootstrap - Creative](https://startbootstrap.com/theme/creative/)
+# Amaravati Chamber of Commerce
 
-[Creative](https://startbootstrap.com/theme/creative/) is a one page, creative website theme built with [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/).
+Welcome to the Amaravati Chamber of Commerce website repository. This project is designed to create an online presence for the Amaravati Chamber, providing valuable resources and information to businesses and the community.
 
-## Preview
+## Table of Contents
 
-[![Creative Preview](https://assets.startbootstrap.com/img/screenshots/themes/creative.png)](https://startbootstrap.github.io/startbootstrap-creative/)
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup](#setup)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-**[View Live Preview](https://startbootstrap.github.io/startbootstrap-creative/)**
+## Overview
 
-## Status
+The Amaravati Chamber of Commerce website serves as a hub for business resources, community events, and networking opportunities in the Amaravati region. Our mission is to support local businesses and foster economic growth in the community.
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-creative/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-creative.svg)](https://www.npmjs.com/package/startbootstrap-creative)
+## Features
 
-## Download and Installation
+- **Home Page**: Overview of the Chamber, mission statement, and latest news.
+- **About Us**: Detailed information about the Chamber, its history, and leadership.
+- **Events**: Calendar of upcoming events and workshops.
+- **Membership**: Information on membership benefits and how to join.
+- **Resources**: Business resources, guides, and useful links.
+- **Contact Us**: Contact form and contact details.
 
-To begin using this template, choose one of the following options to get started:
+## Technologies Used
 
-- [Download the latest release on Start Bootstrap](https://startbootstrap.com/theme/creative/)
-- Install using npm: `npm i startbootstrap-creative`
-- Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-creative.git`
-- [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-creative)
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Bootstrap** (Start Bootstrap Template)
+- **Node.js**
+- **Nginx**
+- **GitHub Actions** for CI/CD
+- **DigitalOcean** for hosting
 
-## Usage
+## Setup
 
-### Basic Usage
+To set up the project locally, follow these steps:
 
-After downloading, simply edit the HTML and CSS files included with `dist` directory. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/amaravati-chamber/landing-page.git
+    cd landing-page
+    ```
 
-### Advanced Usage
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-Clone the source files of the theme and navigate into the theme's root directory. Run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `package.json` file to see which scripts are included.
+3. **Run the development server**:
+    ```bash
+    npm start
+    ```
 
-#### npm Scripts
+4. **Open your browser** and navigate to `http://localhost:3000` to see the website in action.
 
-- `npm run build` builds the project - this builds assets, HTML, JS, and CSS into `dist`
-- `npm run build:assets` copies the files in the `src/assets/` directory into `dist`
-- `npm run build:pug` compiles the Pug located in the `src/pug/` directory into `dist`
-- `npm run build:scripts` brings the `src/js/scripts.js` file into `dist`
-- `npm run build:scss` compiles the SCSS files located in the `src/scss/` directory into `dist`
-- `npm run clean` deletes the `dist` directory to prepare for rebuilding the project
-- `npm run start:debug` runs the project in debug mode
-- `npm start` or `npm run start` runs the project, launches a live preview in your default browser, and watches for changes made to files in `src`
+## Deployment
 
-You must have npm installed in order to use this build environment.
+The website is automatically deployed to DigitalOcean whenever changes are pushed to the `main` branch. This is achieved using GitHub Actions. The build output is stored in the `/dist` directory and served using Nginx.
 
-### Contact Form
+To manually deploy the website, follow these steps:
 
-The contact form available with this theme is prebuilt to use [SB Forms](https://startbootstrap.com/solution/contact-forms).
-SB Forms is a simple form solution for adding functional forms to your theme. Since this theme is prebuilt using our
-SB Forms markup, all you need to do is sign up for [SB Forms on Start Bootstrap](https://startbootstrap.com/solution/contact-forms).
+1. **Build the project**:
+    ```bash
+    npm run build
+    ```
 
-After signing up you will need to set the domain name your form will be used on, and you will then see your
-access key. Copy this and paste it into the `data-sb-form-api-token='API_TOKEN'` data attribute in place of
-`API_TOKEN`. That's it! Your forms will be up and running!
+2. **Copy the build output** to the server:
+    ```bash
+    scp -r dist/* root@your_droplet_ip:/var/www/your_website
+    ```
 
-If you aren't using SB Forms, simply delete the custom data attributes from the form, and remove the link above the
-closing `</body>` tag to SB Forms.
+3. **Restart Nginx**:
+    ```bash
+    ssh root@your_droplet_ip 'sudo systemctl restart nginx'
+    ```
 
-## Bugs and Issues
+## Contributing
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-creative/issues) here on GitHub or leave a comment on the [theme overview page at Start Bootstrap](https://startbootstrap.com/theme/creative/).
+We welcome contributions to improve the Amaravati Chamber of Commerce website. To contribute, please fork the repository, create a new branch, and submit a pull request with your changes. 
 
-## About
+1. **Fork the repository**.
+2. **Create a new branch**:
+    ```bash
+    git checkout -b feature/your-feature-name
+    ```
 
-Start Bootstrap is an open source library of free Bootstrap themes and templates. All of the free themes and templates on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
+3. **Commit your changes**:
+    ```bash
+    git commit -m 'Add some feature'
+    ```
 
-- <https://startbootstrap.com>
-- <https://twitter.com/SBootstrap>
+4. **Push to the branch**:
+    ```bash
+    git push origin feature/your-feature-name
+    ```
 
-Start Bootstrap was created by and is maintained by **[David Miller](https://davidmiller.io/)**.
+5. **Open a pull request**.
 
-- <https://davidmiller.io>
-- <https://twitter.com/davidmillerhere>
-- <https://github.com/davidtmiller>
+## License
 
-Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Copyright and License
+## Contact
 
-Copyright 2013-2023 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE) license.
+For questions or feedback, please contact us at [contact@amaravati-chamber.org](mailto:contact@amaravati-chamber.org).
+
+---
+
+Thank you for visiting the Amaravati Chamber of Commerce website repository!
