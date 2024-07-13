@@ -1,2 +1,35 @@
-node_modules
+# Ignore node_modules folder
+node_modules/
+
+# Ignore logs
+logs/
+*.log
+npm-debug.log*
+
+# Ignore environment variables
+.env
+
+# Ignore OS generated files
 .DS_Store
+Thumbs.db
+
+# Ignore build directories
+dist/
+build/
+
+# Ignore temporary files
+tmp/
+temp/
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+
+# Ignore coverage reports
+coverage/
+
+# Ignore yarn lock file
+yarn.lock
+
+# Ignore package lock file
+package-lock.json
